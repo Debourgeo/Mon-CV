@@ -15,12 +15,12 @@ body {
 .CV {
     display: grid;
     width: 80%;
-    grid-template-columns: repeat(8 1fr);
-    grid-template-rows: repeat(14 7.14%);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 3% repeat(13, 1fr) 3%;
 }
 
 header {
-    grid-column: 3 / 9;
+    grid-column: 5 / 13;
     grid-row: 1 / 3;
     display: flex;
     justify-content: center;
@@ -28,92 +28,110 @@ header {
 }
 
 .profile {
-    grid-column: 1 / 3;
-    grid-row: 1 / 6;
-    display: flex;
+    grid-column: 1 / 5;
+    grid-row: 1 / 5;
+    display: block;
     justify-content: left;
     align-items: center;
     padding-left: 15px;
 }
 
-.profile img {
-    margin: 15px 15px 50px 15px;
-}
-
-.profile p {
-    position: relative;
-    top: 60px;
-    right: 35px;
-    font-size: 1.5em;
-}
-
 .status {
-    grid-column: 1 / 3;
-    grid-row: 6 / 9;
+    grid-column: 1 / 5;
+    grid-row: 5 / 9;
     padding-left: 15px;
 }
 
 .misc {
-    grid-column: 1 / 3;
+    grid-column: 1 / 5;
     grid-row: 9 / 12;
     padding-left: 15px;
 }
 
 .infos {
-    grid-column: 1 / 3;
-    grid-row: 12 / 15;
+    grid-column: 1 / 5;
+    grid-row: 12 / 16;
     padding-left: 15px;
 }
 
 .path {
-    grid-column: 3 / 9;
+    grid-column: 5 / 13;
     grid-row: 3 / 7;
     display: grid;
     grid-template-columns: 25% 75%;
-    padding-left: 25px;
+    grid-template-rows: 33% 66%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.path h2 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
 }
 
 .dates {
     grid-column: 1 / 2;
+    grid-row: 2 / 3
 }
 
 .steps {
     grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 .abilities {
-    grid-column: 3 / 9;
-    grid-row: 7 / 10;
+    grid-column: 5 / 13;
+    grid-row: 7 / 11;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 66%;
     padding-left: 15px;
+    padding-right: 15px;
+}
+
+.abilities h2 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
 }
 
 .abilitiespt1 {
     grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 .abilitiespt2 {
     grid-column: 2 / 3;
+    grid-row: 2 / 3;
     border-left: 2px solid black;
 }
 
 .links {
-    grid-column: 3 / 9;
-    grid-row: 10 / 13;
+    grid-column: 5 / 13;
+    grid-row: 11 / 14;
+    display: grid;
+    grid-template-rows: 45% 55%;
     padding-left: 15px;
+    padding-right: 15px;
+}
+
+.links h2 {
+    grid-row: 1 / 2;
+}
+
+.media {
+    grid-row: 2 / 3;
 }
 
 footer {
-    grid-column: 3 / 9;
-    grid-row: 13 / 15;
+    grid-column: 5 / 13;
+    grid-row: 14 / 16;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .empty{
-    grid-area: 1 / 1 / 15 / 9;
+    grid-area: 1 / 1 / 16 / 13;
 }
 
 /*-----custom sidebar-----*/
@@ -127,7 +145,7 @@ footer {
 .misc,
 .infos {
     background: linear-gradient(135deg, #0081B0 0%, #002938 100%);
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid rgb(100, 100, 100);
 }
 
 header,
@@ -138,11 +156,27 @@ footer {
 .path,
 .abilities,
 .links {
-    background-color: #467180;
+    background: linear-gradient(135deg, #467180 0%, #263d46 100%);
+    border-bottom: 2px solid rgb(160, 160, 160);
 }
 
 header {
     color: white;
+}
+
+.profile img {
+    margin: 20px 0 10px 15px;
+}
+
+.profile p {
+    position: relative;
+    left: 25%;
+    font-size: 1.5em;
+    margin: 5px auto;
+}
+
+h2 {
+    border-bottom: 2px solid black;
 }
 
 h3 {
@@ -154,9 +188,9 @@ h3 {
 }
 
 .plan_bar {
-    width: 200px;
-    height: 15px;
-    background-color: black;
+    width: 70%;
+    height: 20px;
+    background-color: rgb(20, 20, 20);
     margin-left: 50px;
 }
 
@@ -167,9 +201,9 @@ h3 {
 }
 
 .front_bar {
-    width: 200px;
-    height: 15px;
-    background-color: black;
+    width: 70%;
+    height: 20px;
+    background-color: rgb(20, 20, 20);
     margin-left: 50px;
 }
 
@@ -180,9 +214,9 @@ h3 {
 }
 
 .back_bar {
-    width: 200px;
-    height: 15px;
-    background-color: black;
+    width: 70%;
+    height: 20px;
+    background-color: rgb(20, 20, 20);
     margin-left: 50px;
 }
 
@@ -190,6 +224,12 @@ h3 {
     display: block;
     height: 100%;
     background-color: blue;
+}
+
+.plan_bar, 
+.front_bar,
+.back_bar {
+    box-shadow: 2px 2px 5px black;
 }
 
 .status div:last-of-type {
@@ -218,6 +258,11 @@ h3 {
     list-style: none;
 }
 
+.abilitiespt1,
+.abilitiespt2 {
+    height: 75%;
+}
+
 .links ul {
     display: flex;
     flex-direction: row;
@@ -225,7 +270,12 @@ h3 {
 }
 
 .links li {
-    margin: 5% 10%;
+    margin: 0 10%;
+}
+
+.links img {
+    width: 48px;
+    height: 48px;
 }
 
 footer {
